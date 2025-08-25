@@ -46,7 +46,7 @@ class PostListView(LoginRequiredMixin, ListView):
     model = Post
     #queryset = Post.objects.all()
     context_object_name = 'posts' 
-    paginate_by = 2
+    paginate_by = 8
     ordering = "-id"
     #def get_queryset(self):
     #    posts = Post.objects.filter(status = True)

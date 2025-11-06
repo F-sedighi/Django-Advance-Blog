@@ -8,7 +8,7 @@ from accounts.models import User
 @pytest.fixture
 def common_user():
     user = User.objects.create_user(
-        email="admin@admin1.com", password="123", is_verified=True
+        email="sedighifardin1@gmail.com", password="12345678*", is_verified=True
     )
     return user
 

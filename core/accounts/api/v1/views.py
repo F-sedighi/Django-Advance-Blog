@@ -157,7 +157,12 @@ class ActivationApiView(APIView):
 
         user_obj = User.objects.get(pk=user_id)
         if user_obj.is_verified:
-            return Response({"details": "your account has already been verified"})
+            return Response(
+                {
+                    "details": "your account \
+                             has already been verified"
+                }
+            )
         user_obj.is_verified = True
         user_obj.save()
         # decode -> user_id
@@ -169,7 +174,10 @@ class ActivationApiView(APIView):
         # if valid response ok
 
         return Response(
-            {"details": "your account have been verified and activated successfully"}
+            {
+                "details": "your account have been \
+             verified and activated successfully"
+            }
         )
 
 
